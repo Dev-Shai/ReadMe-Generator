@@ -31,32 +31,22 @@ const questions = [
         message: 'What is the usage of your app?',
     },
     {
-        type: 'checkbox',
+        type: 'input',
+        name: 'github',    
+        message: 'What is your GitHub username?',
+    },
+    {
+        type: 'input',
+        name: 'email',    
+        message: 'What is your email address?',
+    },
+    {
+        type: 'list',
         choices: ['Apache 2.0 License', 'The Artistic License 2.0', 'GNU General Public License', 'MIT License', 'Mozilla Public License', 'Perl License'],
         name: 'license',    
         message: 'What license is your app under?',
     }
     ];
-
-    // making the fs writetofile to a function. So that I can call it later
-    function writingToFile(fileName, data) {
-        fs.writeFile(fileName, data, (err) => 
-        err ? console.log(err) : console.log("Your ReadME has been saved!")
-        );
-    }
-
-// function to initialize program need to include the inquirer and fs here. Need to use make a newfile using writetofile function and generatemarkdown function 
-function init() {
-    inquirer.prompt(questions)
-    .then((data) => {
-        let newReadme = generateMarkdown(data);
-        writingToFile(`${data.title.toLowerCase().split(' ').join('')}.md`, newReadme)
-    })
-}
-
-// function call to initialize program
-init();
-
 //use path to record and log the paths of generated markdowns. provide a link to the path of the generated markdown in the console log.
 function init() {
     inquirer.prompt(questions)
@@ -67,6 +57,15 @@ function init() {
     })
 }
 
+    // making the fs writetofile to a function. So that I can call it later
+    function writingToFile(fileName, data) {
+        fs.writeFile(fileName, data, (err) => 
+        err ? console.log(err) : console.log("Your ReadME has been saved!")
+        );
+    }
+
+// function call to initialize program
+init();
 
 // * Create a command-line application that accepts user input.
 //   * When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:

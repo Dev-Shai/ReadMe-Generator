@@ -1,7 +1,7 @@
-# sd
+# tgc
 
   ## Description
-  sd
+  tgc
   
   ## Table of Contents
   - [Project Title](#project-title)
@@ -17,32 +17,32 @@
     - [Questions](#questions)
   
   ## Demo
-  sd
+  ttgc
   
   Preview of and Link to my Completed Task
   ![preview of the website](./W6_Screenshot_Submission.png)
   Link to live URL: https://dev-shai.github.io/W6_Code_Quiz/
   
   ## Installation
-  sd
+  tgc
   
   ## Usage
-  sd
+  rfdv
   
   ## License
-  Apache 2.0 License
+  MIT License
   
   ### License Badges
-  undefined
-  
+  No License
+
   ## Contributing
-  sd
+  tgc
   
   ## Tests
   undefined
   
   ## Questions
   If you have any questions you can:
-  -  Visit the associated GitHub profile here: INSERT
-  -  Send an email to the following email address: INSERT
+  -  Visit the associated GitHub profile here: https://www.github.com/user/tfdg
+  -  Send an email to the following email address: drtgdf
   ---  
