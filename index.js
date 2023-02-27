@@ -3,49 +3,53 @@ const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// 
-
-
-
-
 // array of questions for user
 const questions = [
     inquirer
     .prompt([
     {
         type: 'input',
-        name: 'name',
-        message: 'What is your name?',
+        name: 'title',
+        message: 'What is the title of your app?',
     },
     {
         type: 'input',
-        name: 'location',
-        message: 'Where do you live?',
+        name: 'desc',
+        message: 'What is the description of your app?',
     },
     {
         type: 'input',
-        name: 'bio',    
-        message: 'Write a little bit about yourself',
+        name: 'demo',    
+        message: 'Where can a demo of your app be found?',
     },
     {
         type: 'input',
-        name: 'linkedin',    
-        message: 'What is your LinkedIn username?',
+        name: 'installation',    
+        message: 'What are the installation instructions for your app?',
     },
     {
         type: 'input',
-        name: 'github',    
-        message: 'What is your GitHub username',
+        name: 'usage',    
+        message: 'What is the usage of your app?',
+    },
+    {
+        type: 'checkbox',
+        choices: ['Apache 2.0 License', 'The Artistic License 2.0', 'GNU General Public License', 'MIT License', 'Mozilla Public License', 'Perl License'],
+        name: 'license',    
+        message: 'What license is your app under?',
     },
     ])
     .then((userInput) => {
         const fileContents = getHTML(userInput);
     
-        fs.writeFile("index.html", fileContents, (err) => 
-        err ? console.log(err) : console.log("Success!")
+    // making the fs writetofile to a function. So that I can call it later
+    function writingToFile(fileName, data) {
+        fs.writeFile(`${fileTitle}.md`, fileContents, (err) => 
+        err ? console.log(err) : console.log("Your ReadME has been saved!")
         );
+    }
     })
-    
+
     // .then((data) => {
     // const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
     
@@ -55,13 +59,9 @@ const questions = [
     // });    
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
-// function to initialize program
+// function to initialize program need to include the inquirer and fs here. Need to use make a newfile using writetofile function and generatemarkdown function 
 function init() {
-
+    inquirer.prompt(questions);
 }
 
 // function call to initialize program
@@ -75,11 +75,6 @@ init();
 // use generatemarkdown to create the markdown (likely to require fs here?)
 
 //use path to record and log the paths of generated markdowns
-
-
-
-
-
 
 // * Create a command-line application that accepts user input.
 //   * When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:
