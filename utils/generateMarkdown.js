@@ -20,10 +20,8 @@ function generateMarkdown(data) {
   
   ## Demo
   ${data.demo}
-  
-  Preview of and Link to my Completed Task
-  ![preview of the website](./W6_Screenshot_Submission.png)
-  Link to live URL: https://dev-shai.github.io/W6_Code_Quiz/
+  Link to the deployed application: https://www.github.com/${data.github}/${data.repo}
+  Link to live URL: https://${data.github}.github.io/${data.repo}/
   
   ## Installation
   ${data.title}
@@ -46,7 +44,7 @@ function generateMarkdown(data) {
   
   ## Questions
   If you have any questions you can:
-  -  Visit the associated GitHub profile here: https://www.github.com/user/${data.github}
+  -  Visit the associated GitHub profile here: https://www.github.com/${data.github}
   -  Send an email to the following email address: ${data.email}
   ---  
 `;

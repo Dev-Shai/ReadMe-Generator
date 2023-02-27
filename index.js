@@ -17,11 +17,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'demo',    
-        message: 'Where can a demo of your app be found?',
-    },
-    {
-        type: 'input',
         name: 'installation',    
         message: 'What are the installation instructions for your app?',
     },
@@ -33,7 +28,17 @@ const questions = [
     {
         type: 'input',
         name: 'github',    
-        message: 'What is your GitHub username?',
+        message: 'Your github username and repo name will be used to generate a link to the demo of your app. Firstly, What is your github username?',
+    },
+    {
+        type: 'input',
+        name: 'repo',    
+        message: 'Secondly, What is the name of your repo (please write the repo name it as you have on github)?',
+    },
+    {
+        type: 'input',
+        name: 'demo',    
+        message: 'Provide any additional information about your app when demoing it.',
     },
     {
         type: 'input',
