@@ -53,28 +53,28 @@ function generateMarkdown(data) {
 }
 
 function licenseLogo(data) {
-  let licenseT = data.license;
+  let license = data.license;
   let logo = "";
-switch (licenseT) {
+switch (license) {
   case "Apache 2.0 License":
       // case is used to compare the value of a variable to a value that might match the value of the variable. If there is a match, the associated block of code is executed.
-    logo = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.PNG)](https://opensource.org/licenses/Apache-2.0)";
+    logo = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
         //break is used to terminate a case in a switch statement. If break is omitted, the next case statement is executed.
     break;
   case "The Artistic License 2.0":
-    logo = "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.PNG)](https://opensource.org/licenses/Artistic-2.0)";
+    logo = "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
     break;
   case "GNU General Public License":
-    logo = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.PNG)](https://www.gnu.org/licenses/gpl-3.0)";
+    logo = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
     break;
   case "MIT License":
-    logo = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.PNG)](https://opensource.org/licenses/MIT)";
+    logo = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
     break;
   case "Mozilla Public License":
-    logo = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.PNG)](https://opensource.org/licenses/MPL-2.0)";
+    logo = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
     break;
   case "Perl License":
-    logo = "[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.PNG)](https://opensource.org/licenses/Artistic-2.0)";
+    logo = "[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
     break;
   default:
     logo = "No License";
