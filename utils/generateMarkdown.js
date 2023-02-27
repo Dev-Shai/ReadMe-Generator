@@ -15,13 +15,13 @@ function generateMarkdown(data) {
     - [Description](#description)
     - [License](#license)
     - [Table of Contents](#table-of-contents)
-    - [Demo](#Demo)
+    - [Demo](#demoing)
     - [Installation](#installation)
     - [Usage](#usage)
     - [License](#license)
     - [Contributing](#contributing)
     - [Tests](#tests)
-    - [Open Issues/Bugs](#Open-Issues-and-Bugs)
+    - [Open Issues and Bugs](#open-issues-and-bugs)
     - [Questions](#questions)
   
   ## Demo
