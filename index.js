@@ -38,17 +38,16 @@ const questions = [
     }
     ];
 
-
     // .then((userInput) => {
     //     const fileContents = getHTML(userInput);
     
     // making the fs writetofile to a function. So that I can call it later
     function writingToFile(fileName, data) {
-        fs.writeFile(`${fileName}.md`, data, (err) => 
+        fileName = const fileNamed = `${data.title.toLowerCase().split(' ').join('')}.md`;
+        fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) => 
         err ? console.log(err) : console.log("Your ReadME has been saved!")
         );
     }
-
 
     // .then((data) => {
     // const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
@@ -62,8 +61,8 @@ const questions = [
 function init() {
     inquirer.prompt(questions)
     .then((data) => {
-        let newReadme = 
-        writingToFile("data.title", generateMarkdown(data))
+        let newReadme = generateMarkdown(data);
+        writingToFile("data.title", newReadme)
     })
 }
 
