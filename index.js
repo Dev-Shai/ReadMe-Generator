@@ -5,8 +5,6 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
-    inquirer
-    .prompt([
     {
         type: 'input',
         name: 'title',
@@ -37,18 +35,20 @@ const questions = [
         choices: ['Apache 2.0 License', 'The Artistic License 2.0', 'GNU General Public License', 'MIT License', 'Mozilla Public License', 'Perl License'],
         name: 'license',    
         message: 'What license is your app under?',
-    },
-    ])
-    .then((userInput) => {
-        const fileContents = getHTML(userInput);
+    }
+    ];
+
+
+    // .then((userInput) => {
+    //     const fileContents = getHTML(userInput);
     
     // making the fs writetofile to a function. So that I can call it later
     function writingToFile(fileName, data) {
-        fs.writeFile(`${fileTitle}.md`, fileContents, (err) => 
+        fs.writeFile(`${fileName}.md`, data, (err) => 
         err ? console.log(err) : console.log("Your ReadME has been saved!")
         );
     }
-    })
+
 
     // .then((data) => {
     // const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
@@ -57,11 +57,14 @@ const questions = [
     //     err ? console.log(err) : console.log('Success!')
     // );
     // });    
-];
 
 // function to initialize program need to include the inquirer and fs here. Need to use make a newfile using writetofile function and generatemarkdown function 
 function init() {
-    inquirer.prompt(questions);
+    inquirer.prompt(questions)
+    .then((data) => {
+        let newReadme = 
+        writingToFile("data.title", generateMarkdown(data))
+    })
 }
 
 // function call to initialize program
