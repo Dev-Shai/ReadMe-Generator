@@ -38,45 +38,35 @@ const questions = [
     }
     ];
 
-    // .then((userInput) => {
-    //     const fileContents = getHTML(userInput);
-    
     // making the fs writetofile to a function. So that I can call it later
     function writingToFile(fileName, data) {
-        fileName = const fileNamed = `${data.title.toLowerCase().split(' ').join('')}.md`;
-        fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) => 
+        fs.writeFile(fileName, data, (err) => 
         err ? console.log(err) : console.log("Your ReadME has been saved!")
         );
     }
-
-    // .then((data) => {
-    // const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-    
-    // fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-    //     err ? console.log(err) : console.log('Success!')
-    // );
-    // });    
 
 // function to initialize program need to include the inquirer and fs here. Need to use make a newfile using writetofile function and generatemarkdown function 
 function init() {
     inquirer.prompt(questions)
     .then((data) => {
         let newReadme = generateMarkdown(data);
-        writingToFile("data.title", newReadme)
+        writingToFile(`${data.title.toLowerCase().split(' ').join('')}.md`, newReadme)
     })
 }
 
 // function call to initialize program
 init();
 
+//use path to record and log the paths of generated markdowns. provide a link to the path of the generated markdown in the console log.
+function init() {
+    inquirer.prompt(questions)
+    .then((data) => {
+        let newReadme = generateMarkdown(data);
+        writingToFile(`${data.title.toLowerCase().split(' ').join('')}.md`, newReadme)
+        console.log(`Your ReadMe has been saved to ${path.join(__dirname, `${data.title.toLowerCase().split(' ').join('')}.md`)}`)
+    })
+}
 
-// using inquirer to ask the questions
-
-// using fs to create the file 
-
-// use generatemarkdown to create the markdown (likely to require fs here?)
-
-//use path to record and log the paths of generated markdowns
 
 // * Create a command-line application that accepts user input.
 //   * When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:
