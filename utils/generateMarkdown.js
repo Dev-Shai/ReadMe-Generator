@@ -2,45 +2,49 @@
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ## License
+  ${data.license}
+  
+  ${licenseLogo(data)}
+
   ## Description
   ${data.desc}
   
   ## Table of Contents
   - [Project Title](#project-title)
     - [Description](#description)
+    - [License](#license)
     - [Table of Contents](#table-of-contents)
     - [Demo](#Demo)
     - [Installation](#installation)
     - [Usage](#usage)
     - [License](#license)
-      - [License Badges](#license-badges)
     - [Contributing](#contributing)
     - [Tests](#tests)
+    - [Open Issues/Bugs](#Open-Issues-and-Bugs)
     - [Questions](#questions)
   
   ## Demo
   ${data.demo}
-  Link to the deployed application: https://www.github.com/${data.github}/${data.repo}
-  Link to live URL: https://${data.github}.github.io/${data.repo}/
+  Link to:
+  - The deployed application: https://www.github.com/${data.github}/${data.repo}
+
+  - Link to live URL: https://${data.github}.github.io/${data.repo}/
   
   ## Installation
   ${data.title}
   
   ## Usage
   ${data.usage}
-  
-  ## License
-  ${data.license}
-  
-  ### License Badges
-  
-  ${licenseLogo(data)}
 
   ## Contributing
-  ${data.title}
+  ${data.contribute}
   
   ## Tests
   ${data.tests}
+  
+  ## Open Issues and Bugs
+  ${data.bugs}
   
   ## Questions
   If you have any questions you can:
