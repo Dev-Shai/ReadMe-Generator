@@ -11,6 +11,8 @@
   ## Table of Contents
   - [Project Title](#project-title)    
     - [License](#license)
+
+
     - [Description](#description)
     - [License](#license)
     - [Table of Contents](#table-of-contents)
@@ -23,11 +25,11 @@
     - [Questions](#questions)
   
   ## Demo
-  The links provided can be clicked to see the repo or to contact me.
-  Link to:
+  The video below shows how the readme is generated using the app. The link below directs you to the repo:
+  
   - The deployed application: https://www.github.com/Dev-Shai/ReadMe-Generator
-
-  - Link to live URL: https://Dev-Shai.github.io/ReadMe-Generator/
+  
+  https://user-images.githubusercontent.com/117639821/221658048-1ade0c8d-d4e8-4e24-a9c1-9b3e5ec9bc4d.mp4
   
   ## Installation
   You will need to have node.js and the dependencies listed in the package.json file
