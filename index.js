@@ -17,11 +17,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'installation',    
-        message: 'What are the installation instructions for your app?',
-    },
-    {
-        type: 'input',
         name: 'usage',    
         message: 'What is the usage of your app?',
     },
@@ -44,6 +39,11 @@ const questions = [
         type: 'input',
         name: 'demo',    
         message: 'Provide any additional information about your app when demoing it:',
+    },
+    {
+        type: 'input',
+        name: 'install',    
+        message: 'Provide instructions on how to install your app:',
     },
     {
         type: 'input',

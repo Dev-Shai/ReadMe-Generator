@@ -32,7 +32,7 @@ function generateMarkdown(data) {
   - Link to live URL: https://${data.github}.github.io/${data.repo}/
   
   ## Installation
-  ${data.title}
+  ${data.install}
   
   ## Usage
   ${data.usage}
