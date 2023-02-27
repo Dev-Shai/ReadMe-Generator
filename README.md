@@ -47,5 +47,5 @@
   ## Questions
   If you have any questions you can:
   -  Visit the associated GitHub profile here: https://www.github.com/Dev-Shai
-  -  Send an email to the following email address: example@example.com
   ---  
+This readme was created using this ReadMe Generator.
