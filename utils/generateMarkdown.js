@@ -11,14 +11,14 @@ function generateMarkdown(data) {
   ${data.desc}
   
   ## Table of Contents
-  - [Project Title](#project-title)
+  - [Project Title](#project-title)    
+    - [License](#license)
     - [Description](#description)
     - [License](#license)
     - [Table of Contents](#table-of-contents)
     - [Demo](#demoing)
     - [Installation](#installation)
     - [Usage](#usage)
-    - [License](#license)
     - [Contributing](#contributing)
     - [Tests](#tests)
     - [Open Issues and Bugs](#open-issues-and-bugs)
